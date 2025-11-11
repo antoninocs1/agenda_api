@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  db:
+    container_name: mysql_agenda_api
+    image: mysql:5.7
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: "test"
+      MYSQL_DATABASE: "agendaapi"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "test"
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - "1001:3306"
