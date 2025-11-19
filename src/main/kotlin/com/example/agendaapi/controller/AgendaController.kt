@@ -50,4 +50,10 @@ class AgendaController(
         agendaService.delete(nome)
         return "Registro removido!"
     }
+
+    @DeleteMapping("/id/{id}")
+    @Operation(summary = "Deletar agenda por id", description = "Exclui a agenda identificada pelo id informado.")
+    fun deleteById(@PathVariable id: Long): String {
+        return agendaService.deleteById(id)
+    }
 }

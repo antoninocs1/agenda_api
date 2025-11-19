@@ -11,5 +11,6 @@ interface AgendaService {
     fun update(agenda: Agenda): String
     fun updateTelefone( id: Long, Telefone: String)
     fun updateEmail( id: Long, Email: String)
-    fun delete(nome: String): String
+    fun delete(name: String): String
+    fun deleteById(id: Long): String
 }

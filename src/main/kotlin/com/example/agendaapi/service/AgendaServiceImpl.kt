@@ -30,8 +30,16 @@ class AgendaServiceImpl(val agendaRepository: AgendaRepository) : AgendaService 
         /*if (!agendaRepository.existsById(id))
             return "Registro não existe na base de dados"
 */
-        agendaRepository.deleteByNome(nome)
+                agendaRepository.deleteByNome(nome)
 
         return "Registro removido com sucesso!"
     }
+    
+            override fun deleteById(id: Long): String {
+                if (!agendaRepository.existsById(id))
+                    return "Registro não existe na base de dados"
+        
+                agendaRepository.deleteById(id)
+                return "Registro removido com sucesso!"
+            }
 }
