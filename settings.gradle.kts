@@ -1,1 +1,1 @@
-rootProject.name = "MinhaapiApplication"
+rootProject.name = "AgendaapiApplication"

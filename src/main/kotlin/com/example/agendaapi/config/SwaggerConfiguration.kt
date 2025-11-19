@@ -15,14 +15,14 @@ class SwaggerConfiguration {
         return OpenAPI()
             .info(
                 Info()
-                    .title("Api Title")
+                    .title("Api Agenda")
                     .description("Api Definition")
                     .version("1.0.0")
                     .contact(
                         Contact().apply {
                             name = "Rafael Moura"
                             url = "https://rafaelmoura.dev"
-                            email = "teste@gmail.com"
+                            email = "antoninocs@gmail.com"
                         }
                     )
                     .license(

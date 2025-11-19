@@ -16,8 +16,8 @@ interface AgendaRepository : JpaRepository<Agenda, Long> {
     fun findAllAgenda(): List<Agenda>
 
     // Busca um registro pelo nome
-    @Query(value = "SELECT * FROM agenda WHERE name = :name", nativeQuery = true)
-    fun findByName(@Param("name") name: String): Agenda?
+    @Query(value = "SELECT * FROM agenda WHERE nome = :nome", nativeQuery = true)
+    fun findByNome(@Param("nome") nome: String): Agenda?
 
     // Busca registro pelo cpf
     @Query(value = "SELECT * FROM agenda WHERE cpf = :cpf", nativeQuery = true)
@@ -38,7 +38,7 @@ interface AgendaRepository : JpaRepository<Agenda, Long> {
     // Deleta registro pelo nome
     @Modifying
     @Transactional
-    @Query(value = "DELETE FROM agenda WHERE name = :name", nativeQuery = true)
-    fun deleteByName(@Param("name") name: String)
+    @Query(value = "DELETE FROM agenda WHERE nome = :nome", nativeQuery = true)
+    fun deleteByNome(@Param("nome") nome: String)
 
 }

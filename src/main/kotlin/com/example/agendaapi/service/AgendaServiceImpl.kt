@@ -9,7 +9,7 @@ class AgendaServiceImpl(val agendaRepository: AgendaRepository) : AgendaService 
 
     override fun getAll(): List<Agenda> = agendaRepository.findAll()
 
-    override fun getByName(name: String): Agenda? = agendaRepository.findByName(name)
+    override fun getByNome(nome: String): Agenda? = agendaRepository.findByNome(nome)
 
     override fun save(agenda: Agenda): Agenda = agendaRepository.save(agenda)
 
@@ -26,11 +26,11 @@ class AgendaServiceImpl(val agendaRepository: AgendaRepository) : AgendaService 
 
     override fun updateEmail(id: Long, email: String) = agendaRepository.updateEmail(id, email)
 
-    override fun delete(name: String): String {
+    override fun delete(nome: String): String {
         /*if (!agendaRepository.existsById(id))
             return "Registro não existe na base de dados"
 */
-        agendaRepository.deleteByName(name)
+        agendaRepository.deleteByNome(nome)
 
         return "Registro removido com sucesso!"
     }

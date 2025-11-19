@@ -6,7 +6,7 @@ spring:
     initialization-mode: always
     password: test
     platform: mysql
-    url: jdbc:mysql://localhost:1001/agendaapi
+    url: jdbc:mysql://localhost:1000/crudexample
     username: admin
   jpa:
     properties:

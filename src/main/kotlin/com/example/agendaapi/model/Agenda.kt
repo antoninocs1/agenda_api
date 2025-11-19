@@ -15,7 +15,7 @@ data class Agenda(
     val id: Long = 0,
 
     @Column(nullable = false)
-    val name: String,
+    val nome: String,
 
     @Column(nullable = false)
     val cpf: String,
