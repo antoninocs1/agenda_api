@@ -11,6 +11,8 @@ class AgendaServiceImpl(val agendaRepository: AgendaRepository) : AgendaService 
 
     override fun getByNome(nome: String): Agenda? = agendaRepository.findByNome(nome)
 
+    override fun getById(id: Long): Agenda? = agendaRepository.findById(id).orElse(null)
+
     override fun save(agenda: Agenda): Agenda = agendaRepository.save(agenda)
 
     override fun update(agenda: Agenda): String {

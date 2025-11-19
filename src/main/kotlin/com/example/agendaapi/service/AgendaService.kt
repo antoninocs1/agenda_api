@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service
 interface AgendaService {
     fun getAll(): List<Agenda>
     fun getByNome(nome: String): Agenda?
+    fun getById(id: Long): Agenda?
     fun save(agenda: Agenda): Agenda
     fun update(agenda: Agenda): String
     fun updateTelefone( id: Long, Telefone: String)
